@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import Personagens from './assets/pages/Personagens'
+import Personagens from './pages/personagens/Personagens'
 
 function App() {
 
