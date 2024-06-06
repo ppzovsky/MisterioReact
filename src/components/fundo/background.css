@@ -1,6 +1,12 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
 body{
     background-image: url('../src/assets/img/background/fundoTrem.png');
-    background-size: 105vw;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }

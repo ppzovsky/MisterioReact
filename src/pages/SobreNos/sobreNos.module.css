@@ -1,0 +1,64 @@
+.body{
+    background-image: url('../src/assets/img/background/fundoTrem.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.logo {
+    text-align: center;
+    padding-top: 125px;
+}
+
+.card {
+    padding-top: 100px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.lista {
+    margin-right: 70px;
+}
+
+.imagem {
+    display: flex;
+    width: 219px;
+    height: 163px;
+    border: 2px solid #372022;
+    background-color: rgb(255, 255, 255);
+}
+
+.foto {
+    width: 219px;
+    height: 163px;
+    display: flex;
+}
+
+.nome {
+    width: 219px;
+    height: 54px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E08000;
+    font-size: 24px;
+    border: 2px solid #372022;
+    background-color: #0E0506;
+}
+
+.calsse {
+    width: 219px;
+    height: 54px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #372022;
+    font-size: 24px;
+    border: 2px solid #372022;
+    background-color: #E08000;
+    
+}
