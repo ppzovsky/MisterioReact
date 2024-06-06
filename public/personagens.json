@@ -1,0 +1,28 @@
+[
+    {
+      "id"  : "bruxa",
+      "nome": "Morgana Shadowveil",
+      "lore": "Morgana é uma bruxa sábia e reclusa que vive em uma cabana escondida na floresta encantada. Conhecida por seus profundos conhecimentos em feitiçaria e poções, ela ajuda os aldeões em segredo, embora muitos a temam. Sua natureza reservada a mantém distante dos outros, mas sua bondade é evidente para aqueles que a conhecem verdadeiramente."
+    },
+    {
+      "id"  : "vampiro",
+      "nome": "Vladislav Darkthorn",
+      "lore": "Vladislav é um vampiro aristocrata da Transilvânia, com uma personalidade intimista e arrogante. Ele se considera superior a todos ao seu redor e frequentemente despreza os humanos e outras criaturas. Apesar de seu exterior frio e distante, Vladislav esconde um passado traumático que moldou sua atitude desdenhosa."
+    },
+    {
+      "id"  : "robo",
+      "nome": "XR-47",
+      "lore": "XR-47 é um robô mercenário especializado no comércio de itens ilegais, desde armas até artefatos raros. Com uma inteligência artificial avançada e uma aparência robusta, XR-47 é eficiente e implacável em seus negócios. Embora sua programação inicial fosse para fins pacíficos, ele foi reprogramado para o submundo do crime, tornando-se uma figura temida e respeitada."
+    },
+    {
+      "id"  : "pirata",
+      "nome": "Bart Blackbeard",
+      "lore": "Bart é o típico pirata beberrão e engraçado, sempre com um copo de rum na mão e uma risada contagiante. Ele é viciado em um jogo de dados chamado \"Crimson Dice\" e passa a maior parte do tempo em tabernas jogando e contando histórias exageradas de suas aventuras. Embora pareça despreocupado, Bart é extremamente leal aos seus amigos e tripulação."
+    },
+    {
+      "id"  : "demonio",
+      "nome": "Emberflame",
+      "lore": "Ember é uma jovem demônio com cabelo de fogo e um espírito travesso, mas não é maligna. Ela vive em um pequeno vilarejo demoníaco e leva uma vida comum para um demônio, fazendo travessuras e brincando com seus amigos. Lilith é curiosa e cheia de energia, sempre pronta para novas aventuras, mas seu coração é puro e ela valoriza a amizade acima de tudo."
+    }
+  ]
+  
