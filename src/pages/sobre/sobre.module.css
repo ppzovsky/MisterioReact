@@ -12,14 +12,15 @@
 }
 
 .card {
-    padding-top: 100px;
+    width: 100vw;
+    padding-top: 70px;
     display: flex;
     list-style: none;
     justify-content: center;
 }
 
 .lista {
-    margin-right: 70px;
+    margin: 30px;
 }
 
 .imagem {

@@ -1,10 +1,5 @@
-//import Personagens from './pages/personagens/Personagens'
 import '../src/components/fundo/background.css'
-import SobreNos from './pages/SobreNos/SobreNos'
-import Sidebar from './components/sidebar/sidebar'
-//import SobreNos from './pages/SobreNos/SobreNos'
-import Vagoes from './pages/vagoes/Vagoes'
-//import Home from './pages/home/Home'
+import Sobre from './pages/sobre/Sobre'
 
 function App() {
 
@@ -12,9 +7,7 @@ function App() {
     <>
       <div>
 
-      <Sidebar />
-
-      <Vagoes />
+      <Sobre />
 
       </div>
     </>

@@ -1,9 +1,6 @@
 import styles from './personagens.module.css';
-import { seletor } from '../../functions/seletorpersonagens.js';
 import { useEffect, useState } from 'react';
-import { useState, useEffect } from 'react';
 import axios from 'axios';
-import styles from './personagens.module.css';
 
 const Personagens = () => {
     const [dados, setDados] = useState([]);

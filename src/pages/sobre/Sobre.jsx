@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './sobre.module.css';
 import logo from '../../assets/img/logo.png'
 import axios from 'axios';
