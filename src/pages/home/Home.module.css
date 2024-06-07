@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Jaini+Purva&display=swap');
+
+.container{
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 500px;
+}
+
+.butao{
+    color: #0E0506;
+    font-family: "Germania One", system-ui;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 21px;
+    padding: 4px 4px 5px 5px;
+    width: 150px;
+    background-color: #E08000;
+}
+
+.butaoContainer{
+    margin-top: -150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerzao{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
