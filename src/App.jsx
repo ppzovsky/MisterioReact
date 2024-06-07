@@ -1,14 +1,14 @@
 import '../src/components/fundo/background.css'
-import Sobre from './pages/sobre/Sobre'
+import Crime from './pages/crime/Crime'
+import Investigacao from './pages/investigacao/Investigacao'
+import Vagoes from './pages/vagoes/Vagoes'
 
 function App() {
 
   return (
     <>
       <div>
-
-      <Sobre />
-
+        <Crime />
       </div>
     </>
   )
