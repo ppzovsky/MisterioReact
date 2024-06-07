@@ -1,14 +1,17 @@
-import Personagens from './pages/personagens/Personagens'
+import Login from './pages/login/Login'
+import Cadastro from './pages/cadastro/Cadastro'
+import React, {useState} from 'react'
 
 function App() {
 
   return (
     <>
       <div>
-      <Personagens />
+        <Cadastro />
       </div>
     </>
   )
+   
 }
 
 export default App

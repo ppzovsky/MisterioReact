@@ -1,4 +1,4 @@
-import '../css/personagens.css'
+import '../personagens/personagens.css'
 import '../../functions/seletorpersonagens.js'
 
 function Personagens() {
