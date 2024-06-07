@@ -1,17 +1,17 @@
-import Login from './pages/login/Login'
-import Cadastro from './pages/cadastro/Cadastro'
-import React, {useState} from 'react'
+import { Outlet, useLocation } from 'react-router-dom';
+import Sidebar from './components/sidebar/sidebar';
 
 function App() {
+  const location = useLocation();
+
+  const routesWithoutSidebar = ['/']; 
 
   return (
-    <>
-      <div>
-        <Cadastro />
-      </div>
-    </>
-  )
-   
+    <div>
+      {routesWithoutSidebar.includes(location.pathname) ? null : <Sidebar />} 
+      <Outlet />
+    </div>
+  );
 }
+export default App;
 
-export default App

@@ -1,0 +1,23 @@
+.fichario {
+    display: flex; /* Alinha abas e conteúdo lado a lado */
+  }
+  
+  .abas {
+    width: 200px; /* Largura das abas */
+  }
+  
+  .conteudo {
+    position: relative; /* Para posicionar as páginas */
+    width: 400px; /* Largura do conteúdo */
+  }
+  
+  .pagina {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+  }
+  

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Jaini+Purva&display=swap');
+
+.carousel {
+  flex-direction: row;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.carouselContent {
+  display: flex;
+  overflow: hidden;
+  width: 80vw;
+  max-width: 1000px;
+  max-height: 600px;
+  position: relative;
+}
+
+.slide {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.slide img {
+  background-color: #0E0506;
+  border: 2px solid #E08000;
+  padding: 10px;
+  max-width: 100%;
+  max-height: 50%;
+  margin-bottom: 10px;
+}
+
+.slide h1, .slide p {
+  margin: 10px 0;
+}
+
+.navButton {
+  background-color: transparent;
+  color: #E08000;
+  border: none;
+  cursor: pointer;
+  font-size: 80px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.09s ease;
+}
+
+.navButton:active {
+  transform: scale(0.9);
+}
+
+.navButton:hover {
+  color: #c4500d;
+}
+
+
+.active {
+  display: flex;
+}
+
+.slide h1 {
+  font-family: "Jaini Purva", system-ui;
+  font-size: 4rem;
+  color: #E08000;
+  text-shadow: 2px 2px 5px #000;
+  margin: 20px 20px 0px 20px;
+  text-transform: uppercase;
+  background-color: #0e05069c;
+  border: 2px solid #E08000;
+  padding: 10px 20px;
+  border-bottom: none;
+}
+
+.slide .comentario{
+  font-family: "Germania One", system-ui;
+  font-size: 1rem;
+  color: #0E0506;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2%; 
+  height: 300px;
+  width: 450px;
+  background-image: url('../../assets/img/scrolls/scroll.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
