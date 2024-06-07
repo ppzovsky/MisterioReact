@@ -25,44 +25,47 @@ function Investigacao() {
     <>
       <div className={styles.container}>
         <div className={styles.papel}>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <img src={image} alt="logo" />
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <div className={styles.imageContainer}>
+              <img src={image} alt="logo" className={styles.logo} />
             </div>
-            <label htmlFor="choices">QUEM É O ASSASSINO?</label>
+            <label htmlFor="choices" className={styles.label}>QUEM É O ASSASSINO?</label>
             <select 
               id="choices" 
               name="choices" 
               value={choice} 
               onChange={(e) => setChoice(e.target.value)}
-              className={choice === 'option1' ? styles.selectDefault : styles.selectNormal}
+              className={`${styles.select} ${choice === 'option1' ? styles.selectDefault : styles.selectNormal}`}
             >
-              <option value="option1" className={styles.default}>Default</option>
-              <option value="option2">Bruxa</option>
-              <option value="option3">Vampiro</option>
-              <option value="option4">Ciborgue</option>
-              <option value="option5">Pirata</option>
-              <option value="option6">Demo</option>
+              <option value="option1" className={styles.default}></option>
+              <option value="option2">Morgana Shadowveil</option>
+              <option value="option3">Vladislav Darkthorn</option>
+              <option value="option4">XR-47</option>
+              <option value="option5">Bart Blackbeard</option>
+              <option value="option6">Emberflame</option>
             </select>
-            <label htmlFor="porque">POR QUAL MOTIVO?</label>
+            <label htmlFor="porque" className={styles.label}>POR QUAL MOTIVO?</label>
             <input 
               type="text" 
               value={reason} 
               onChange={(e) => setReason(e.target.value)}
               placeholder="Por inveja?"
+              className={styles.input}
             />
-            <label htmlFor="como">COMO?</label>
+            <label htmlFor="como" className={styles.label}>COMO?</label>
             <input 
               type="text" 
               value={how} 
               onChange={(e) => setHow(e.target.value)}
               placeholder="Com uma faca?"
+              className={styles.input}
             />
             <div className={styles.botao}>
               <button 
                 type="submit" 
                 disabled={isButtonDisabled}
-                className={isButtonDisabled ? styles.buttonDisabled : styles.buttonEnabled}>
+                className={`${isButtonDisabled ? styles.buttonDisabled : styles.buttonEnabled}`}
+              >
                 ENVIAR
               </button>
             </div>
@@ -71,6 +74,7 @@ function Investigacao() {
       </div>
     </>
   );
+  
 }
 
 export default Investigacao;

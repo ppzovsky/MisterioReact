@@ -7,6 +7,8 @@ import Home from './pages/home/Home.jsx'
 import Personagens from './pages/personagens/Personagens.jsx'
 import Vagoes from './pages/vagoes/Vagoes.jsx'
 import App from './App.jsx'
+import Crime from './pages/crime/Crime.jsx'
+import Investigacao from './pages/investigacao/Investigacao.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
         {
           path: "/sobre",
           element: <Sobre />
+        },
+        {
+          path: "/crime",
+          element: <Crime />
+        },
+        {
+          path: "/investigacao",
+          element: <Investigacao />
         },
     ],
   },

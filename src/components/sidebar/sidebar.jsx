@@ -33,7 +33,7 @@ const Sidebar = () => {
                 </div>
                 <ul className={styles.sideItems}>
                     <li className={`${styles.sideItem} ${styles.active}`}>
-                        <Link to="/">
+                        <Link to="/crime">
                             <FaSkull />
                             <span className={styles.itemDescription}>Crime</span>
                         </Link>
@@ -51,15 +51,9 @@ const Sidebar = () => {
                         </Link>
                     </li>
                     <li className={`${styles.sideItem} ${styles.active}`}>
-                        <Link to="/">
+                        <Link to="/investigacao">
                             <FaUserSecret />
                             <span className={styles.itemDescription}>Investigação</span>
-                        </Link>
-                    </li>
-                    <li className={`${styles.sideItem} ${styles.active}`}>
-                        <Link to="/">
-                        <FaUser />
-                            <span className={styles.itemDescription}>Perfil</span>
                         </Link>
                     </li>
                     <li className={`${styles.sideItem} ${styles.active}`}>
@@ -74,6 +68,13 @@ const Sidebar = () => {
                 </button>
             </div>
             <div className={styles.logout}>
+                
+            <Link to="/">
+                    <button className={styles.perfilBtn}>
+                    <FaUser />
+                        <span className={styles.itemDescription}>Perfil</span>
+                    </button>
+                </Link>
                 <button className={styles.logoutBtn}>
                 <MdLogout />
                     <span className={styles.itemDescription}>Logout</span>

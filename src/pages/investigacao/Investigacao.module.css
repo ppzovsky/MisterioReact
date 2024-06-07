@@ -1,40 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Jaini+Purva&display=swap');
 
-.container{
+.container {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
   font-family: "Germania One", system-ui;
-  display: grid;
   place-items: center;
   height: 100vh;
 }
 
-.folha{
-  width: 560px;
-  height: auto;
+.papel {
+  display: flex;
+  justify-content: center;
+  width: 90vh;
+  height: 90vh;
+  background-image: url('../../assets/img/scrolls/folha.png');
+  background-size: cover;
+  background-position: center;
 }
 
-img{
+.imageContainer img {
   width: 160px;
 }
 
-label{
+.label {
   margin: 10px 10px -5px 10px;
   font-size: 20px;
 }
 
-form{
+.form { 
   padding: 60px 60px 60px 60px;
   text-align: center;
   display: grid;
   justify-content: center;
-  background-image: url('../../assets/img/scrolls/folha.png');
-  background-size: cover;
-  background-position: center;
-  height: 60vh;
-  width: 50vh;
+  height: 80vh;
+  width: 80vh;
 }
 
-select{
+.select {
   padding: 0 1px;
   border-radius: 5px;
   max-width: 300px;
@@ -43,57 +48,61 @@ select{
   color: #F2A633;
 }
 
-option{
-  border-radius: 0;
+option {
+  border-radius: 0; 
   background-color: #0E0506;
 }
 
-input{
+.input {
   padding: 0 5px;
   border-radius: 5px;
   width: 235px;
   max-height: 30px;
   background-color: #0E0506;
   color: #F2A633;
+  font-family: "Germania One", system-ui;
 }
 
-button{
+
+.buttonDisabled {
   width: 100px;
   height: 40px;
   border-radius: 15px;
-}
-
-.buttonDisabled {
   background-color: #0e0506;
   color: #f2a6337a;
   cursor: not-allowed;
+  font-family: "Germania One", system-ui;
 }
   
 .buttonEnabled {
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
   background-color: #0E0506;
   color: #F2A633;
   cursor: pointer;
+  font-family: "Germania One", system-ui;
 }
 
-.botao{
+.botao {
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-select:hover{
+.select:hover {
   cursor: pointer;
 }
 
-.default{
+.default {
   color: #f2a63383;
 }
 
-input::placeholder{
+.input::placeholder {
   color: #f2a63383;
 }
 
-.selectDefault{
+.selectDefault {
   color: #f2a63383;
 }
