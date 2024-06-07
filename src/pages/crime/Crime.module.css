@@ -1,0 +1,26 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bruxa{
+  height: 500px;
+  position: relative;
+}
+
+.card{
+  width: 150px;
+  position: absolute;
+  bottom: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+.vitma{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

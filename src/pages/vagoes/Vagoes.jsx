@@ -6,7 +6,7 @@ import { IoIosArrowDropright } from 'react-icons/io';
 
 const Vagoes = () => {
   const [dados, setDados] = useState([]);
-
+  
   useEffect(() => {
       axios.get('/vagoes.json')
           .then(response => {
