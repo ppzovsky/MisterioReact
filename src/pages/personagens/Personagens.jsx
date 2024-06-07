@@ -1,59 +1,68 @@
 import styles from './personagens.module.css';
 import { seletor } from '../../functions/seletorpersonagens.js';
 import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
+import styles from './personagens.module.css';
 
 const Personagens = () => {
     const [dados, setDados] = useState([]);
-
-    useEffect(() => {
-        seletor();
-    }, []);
+    const [personagemSelecionado, setPersonagemSelecionado] = useState(null);
 
     useEffect(() => {
         axios.get('/personagens.json')
             .then(response => {
-                setDados(response.data);
+                setDados(response.data.slice(1));
             })
             .catch(error => {
                 console.error('Erro ao buscar dados:', error);
             });
     }, []);
 
-    const suspeitos = dados.slice(1);
+    const handleMouseEnter = (personagem) => {
+        if (window.innerWidth < 450) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        setPersonagemSelecionado(personagem);
+    };
 
     return (
-        <>
-            <div>
-                <main className={styles['selecao-de-personagens']}>
-                    <section className={styles.personagens}>
-                        <ul className={styles['lista-de-personagens']}>
-                            {suspeitos.map(personagem => (
-                                <li
-                                    key={personagem.id}
-                                    className={`${styles.personagem} ${styles.selecionado}`}
-                                    id={personagem.id}
-                                    data-name={personagem.nome}
-                                    data-description={personagem.lore}
-                                >
-                                    <img src= {`../src/assets/img/cards/${personagem.id}.png`} className= {styles.cardPersonagem} alt={`Personagem ${personagem.nome}`} />
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
+        <div>
+            <main className={styles['selecao-de-personagens']}>
+                <section className={styles.personagens}>
+                    <ul className={styles['lista-de-personagens']}>
+                        {dados.map(personagem => (
+                            <li
+                                key={personagem.id}
+                                className={`${styles.personagem} ${personagemSelecionado?.id === personagem.id ? styles.selecionado : ''}`}
+                                id={personagem.id}
+                                data-name={personagem.nome}
+                                data-description={personagem.lore}
+                                onMouseEnter={() => handleMouseEnter(personagem)}
+                            >
+                                <img 
+                                    src={`../src/assets/img/cards/${personagem.id}.png`} 
+                                    className={styles.cardPersonagem} 
+                                    alt={`Personagem ${personagem.nome}`} 
+                                />
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+                {personagemSelecionado && (
                     <section className={styles['personagem-selecionado']}>
                         <div className={styles.titulo}>
-                            <h2 className={styles['nome-personagem']} id="nome-personagem">Bruxa</h2>
+                            <h2 className={styles['nome-personagem']}>{personagemSelecionado.nome}</h2>
                         </div>
-                        <img className={styles['personagem-grande']} src="./src/imagens/card-ciclope.png" alt="Personagem Selecionado" />
+                        <img className={styles['personagem-grande']} src={`../src/assets/img/personas/card-${personagemSelecionado.id}.png`} alt={`Personagem Selecionado`} />
                         <div className={styles['informacoes-personagem']}>
-                            <p className={styles['descricao-personagem']} id="descricao-personagem">Ele tem pode de disparar rajadas ópticas, por um acidente que aconteceu com ele quando criança, mas não consegue controlá-los</p>
+                            <p className={styles['descricao-personagem']}>{personagemSelecionado.lore}</p>
                         </div>
                     </section>
-                </main>
-            </div>
-        </>
-    )
-}
+                )}
+            </main>
+        </div>
+    );
+};
 
 export default Personagens;

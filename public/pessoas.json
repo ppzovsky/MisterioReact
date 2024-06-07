@@ -1,0 +1,28 @@
+[
+    {
+        "nome": "CESAR D.",
+        "classe": "Dragão",
+        "imagem": "./src/assets/img/dragao.jpg"
+    },
+    {
+        "nome": "EMANUEL F.",
+        "classe": "Dragão",
+        "imagem": "./src/assets/img/dragao.jpg"
+    },
+    {
+        "nome": "JOÃO PEDRO",
+        "classe": "Dragão",
+        "imagem": "./src/assets/img/dragao.jpg"
+    },
+    {
+        "nome": "MADU",
+        "classe": "Dragão",
+        "imagem": "./src/assets/img/dragao.jpg"
+    }, 
+    {
+        "nome": "THIAGO M.",
+        "classe": "Dragão",
+        "imagem": "./src/assets/img/dragao.jpg"
+    }
+
+]
