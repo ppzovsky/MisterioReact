@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Primeiro Vagão",
+        "imgSrc": "./src/assets/img/vagoes/Vagao1.png",
+        "description": "A imagem mostra um quarto detalhado em estilo de arte de jogo de tabuleiro ou RPG..."
+    },
+    {
+        "title": "Segundo Vagão",
+        "imgSrc": "./src/assets/img/vagoes/Vagao2.png",
+        "description":"A imagem mostra um quarto detalhado em estilo de arte de jogo de tabuleiro ou RPG..."
+    },
+    
+    {
+        "title": "Terceiro Vagão",
+        "imgSrc": "./src/assets/img/vagoes/Vagao3.png",
+        "description":"A imagem mostra um quarto detalhado em estilo de arte de jogo de tabuleiro ou RPG..."
+    },
+    
+    {
+        "title": "Quarto Vagão",
+        "imgSrc": "./src/assets/img/vagoes/Vagao4.png",
+        "description":"A imagem mostra um quarto detalhado em estilo de arte de jogo de tabuleiro ou RPG..."
+    },
+    
+    {
+        "title": "Quinto Vagão",
+        "imgSrc": "./src/assets/img/vagoes/Vagao5.png",
+        "description":"A imagem mostra um quarto detalhado em estilo de arte de jogo de tabuleiro ou RPG..."
+    }
+]
