@@ -24,8 +24,7 @@ const Personagens = () => {
     };
 
     return (
-        <div>
-            <main className={styles['selecao-de-personagens']}>
+            <div className={styles['selecao-de-personagens']}>
                 <section className={styles.personagens}>
                     <ul className={styles['lista-de-personagens']}>
                         {dados.map(personagem => (
@@ -57,8 +56,7 @@ const Personagens = () => {
                         </div>
                     </section>
                 )}
-            </main>
-        </div>
+            </div>
     );
 };
 

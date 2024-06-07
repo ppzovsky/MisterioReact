@@ -1,5 +1,6 @@
 import style from './Home.module.css'
 import logo from '../../assets/img/logo/logo.png'
+import { Link } from 'react-router-dom'
 
 function Home() {
 
@@ -10,7 +11,9 @@ function Home() {
           <img src={logo} alt="" className={style.logo}/>
         </div>
         <div className={style.butaoContainer}>
-          <button className={style.butao}>COMECE A INVESTIGAÇÃO</button>
+          <Link to='/suspeitos'>
+            <button className={style.butao}>COMECE A INVESTIGAÇÃO</button>
+          </Link>
         </div>
       </form>
     </>

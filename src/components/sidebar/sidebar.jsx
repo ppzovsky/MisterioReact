@@ -10,7 +10,7 @@ import { MdLogout } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
 import lupa from '../../assets/img/lupa.png';
 import logo from '../../assets/img/logo.png';
-
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,48 +23,50 @@ const Sidebar = () => {
         <nav className={`${styles.sidebar} ${isOpen ? styles.openSidebar : ''}`}>
             <div className={styles.sidebarContent}>
                 <div className={styles.logo}>
-                    <img
-                        src={isOpen ? logo : lupa}
-                        alt="Logo"
-                        style={{ width: 'auto', height: isOpen ? '100px' : '60px' }}
-                    />
+                    <Link to='/'>
+                        <img
+                            src={isOpen ? logo : lupa}
+                            alt="Logo"
+                            style={{ width: 'auto', height: isOpen ? '100px' : '60px' }}
+                        />
+                    </Link>
                 </div>
                 <ul className={styles.sideItems}>
                     <li className={`${styles.sideItem} ${styles.active}`}>
-                        <a href="#">
-                        <FaSkull />
+                        <Link to="/">
+                            <FaSkull />
                             <span className={styles.itemDescription}>Crime</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={`${styles.sideItem} ${styles.active}`}>
-                        <a href="#">
+                        <Link to="/suspeitos">
                         <RiFootprintFill />
                             <span className={styles.itemDescription}>Suspeitos</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={`${styles.sideItem} ${styles.active}`}>
-                        <a href="#">
+                        <Link to="/vagoes">
                         <FaTrainSubway />
                             <span className={styles.itemDescription}>Vagões</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={`${styles.sideItem} ${styles.active}`}>
-                        <a href="#">
+                        <Link to="/">
                             <FaUserSecret />
                             <span className={styles.itemDescription}>Investigação</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={`${styles.sideItem} ${styles.active}`}>
-                        <a href="#">
+                        <Link to="/">
                         <FaUser />
                             <span className={styles.itemDescription}>Perfil</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={`${styles.sideItem} ${styles.active}`}>
-                        <a href="#">
+                        <Link to="/sobre">
                         <FaQuestion />
                             <span className={styles.itemDescription}>Quem somos?</span>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <button className={styles.openBtn} onClick={handleToggleSidebar}>

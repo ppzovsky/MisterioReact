@@ -1,17 +1,17 @@
-import '../src/components/fundo/background.css'
-import Sobre from './pages/sobre/Sobre'
+import { Outlet, useLocation } from 'react-router-dom';
+import Sidebar from './components/sidebar/sidebar';
 
 function App() {
+  const location = useLocation();
+
+  const routesWithoutSidebar = ['/']; 
 
   return (
-    <>
-      <div>
-
-      <Sobre />
-
-      </div>
-    </>
-  )
+    <div>
+      {routesWithoutSidebar.includes(location.pathname) ? null : <Sidebar />} 
+      <Outlet />
+    </div>
+  );
 }
+export default App;
 
-export default App

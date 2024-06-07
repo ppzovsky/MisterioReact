@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Jaini+Purva&display=swap');
 
 .container{
-    margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,17 +23,20 @@
     padding: 4px 4px 5px 5px;
     width: 150px;
     background-color: #E08000;
+    cursor: pointer;
 }
 
 .butaoContainer{
-    margin-top: -150px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .containerzao{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     place-items: center;
     height: 100vh;
+    min-width: 100vw;
 }

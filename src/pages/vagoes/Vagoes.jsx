@@ -1,16 +1,11 @@
 import { useEffect, useState } from 'react';
 import styles from './Vagoes.module.css';
 import axios from 'axios';
-import seletor from '../../functions/seletorpersonagens';
 import { IoIosArrowDropleft } from 'react-icons/io';
 import { IoIosArrowDropright } from 'react-icons/io';
 
 const Vagoes = () => {
   const [dados, setDados] = useState([]);
-
-  useEffect(() => {
-      seletor();
-  }, []);
 
   useEffect(() => {
       axios.get('/vagoes.json')

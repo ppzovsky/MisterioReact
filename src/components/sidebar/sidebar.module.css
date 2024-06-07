@@ -9,7 +9,12 @@
 body {
     display: flex;
     min-height: 100vh;
+    max-width: 10vw;
     background-color: transparent;
+    background-image: url('../src/assets/img/background/fundoTrem.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 main {
@@ -31,9 +36,11 @@ main {
     background-color: #0E0506;
     height: 100vh;
     border-radius: 0px 18px 18px 0px;
-    position: relative;
+    position: absolute;
+    z-index: 3;
     transition: all .5s;
     min-width: 82px;
+    max-width: 200px;
 }
 
 .sidebarContent {
