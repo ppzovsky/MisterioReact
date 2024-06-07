@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Jaini+Purva&display=swap');
+
+.corpo {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+.container {
+    width: 400px;
+    padding: 2%;
+    border-radius: 5px;
+    border: 3px solid #372022;
+    background-color: #0E0506;
+    display: flex;
+    align-items: center;
+    padding-bottom: 100px;
+    justify-content: center;
+}
+
+.logo {
+    width: 270px;
+    margin-top: 25px;
+}
+
+.containerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registrar:hover {
+    background-color: #7b4805;
+    cursor: pointer;
+}
+
+.registrar {
+    width: 45%;
+    padding: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    font-family: "Jaini Purva", system-ui; 
+    font-size: 25px; 
+    place-items: center;
+    align-items: center;
+    display: flex;
+    background-color: #E08000;
+    border: none;
+}
+
+.botaoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+input {
+    background-color: #0E0506;
+    border-radius: 20px;
+    border: 3px solid #372022;
+    max-width: 100%;
+    height: 33px;
+    padding: 10px 10px 10px;
+    font-size: 23px;
+    color: #ffc881;
+    font-family: "Germania One", system-ui;
+}
