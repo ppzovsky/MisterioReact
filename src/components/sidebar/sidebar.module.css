@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: transparent;
+}
+
+main {
+    padding: 20px;
+    position: fixed;
+}
+
+.header {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    background-color: #0E0506;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0E0506;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    position: relative;
+    transition: all .5s;
+    min-width: 82px;
+}
+
+.sidebarContent {
+    padding: 12px;
+}
+
+.logoImg {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideItems {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    font-family: "Germania One", system-ui
+}
+
+.sideItem {
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.sideItem.active {
+    background-color: #E08000;
+}
+
+.sideItem.active:hover {
+    background-color: #7b4805;
+}
+
+.openBtn:hover {
+    background-color: #7b4805;
+}
+
+.logoutBtn:hover {
+    background-color: #e00000;
+}
+
+.sideItem a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0E0506;
+}
+
+.sideItem a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.logout {
+    border-top: #0E0506;
+    padding: 12px;
+}
+
+.logoutBtn {
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: #E08000;
+    font-family: "Germania One", system-ui
+}
+
+.openBtn {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: #E08000;
+    color: #0E0506;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.openBtn {
+    transition: transform .3s ease;
+}
+
+.openSidebar .openBtn {
+    transform: rotate(180deg);
+}
+
+.itemDescription {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+}
+
+.sidebar.openSidebar {
+    min-width: 15%;
+}
+
+.sidebar.openSidebar .itemDescription {
+    width: 150px;
+    height: auto;
+}
+
+.sidebar.openSidebar .sideItem a {
+    justify-content: flex-start;
+    gap: 14px;
+}

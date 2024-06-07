@@ -1,4 +1,4 @@
-import styles from './personagens.module.css'; 
+import styles from './personagens.module.css';
 import { seletor } from '../../functions/seletorpersonagens.js';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
