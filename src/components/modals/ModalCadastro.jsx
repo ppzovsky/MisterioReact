@@ -34,7 +34,7 @@ const ModalCadastro = ({ isOpen, onClose, onSelectImage }) => {
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>
-        <h2 className={styles.titulo}>Escolha seu Personagem</h2>
+        <h2 className={styles.titulo}>ESCOLHA SEU PERSONAGEM</h2>
         <div className={styles.imageGrid}>
           {images.map((image, index) => (
             <img

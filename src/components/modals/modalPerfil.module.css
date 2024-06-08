@@ -9,11 +9,12 @@
     justify-content: center;
     align-items: center;
   }
+
   .titulo{
     align-items: center;
     font-family: "Jaini Purva", system-ui; 
-    margin-bottom: 20px;
-    color: #E08000;
+    color: #372022;
+    text-transform: uppercase;
   }
   
   .modalContent {
@@ -21,21 +22,24 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #372022;
-    padding: 20px;
+    background: #0E0506;
+    padding: 20px 0px 0px 0px;
     border-radius: 8px;
-    max-width: 500px;
-    width: 100%;
+    width: 300px;
+    height: 400px;
+    border: #E08000 2px solid;
   }
   
   .imageGrid {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    justify-content: center;
+    align-items: center;
   }
 
   .imageGrid img{
-    border-radius: 10px;
+    border-radius: 180px;
     transition: 0.5s;
   }
 
@@ -46,12 +50,13 @@
   }
   
   .imageOption {
-    width: 100%;
+    width: 180px;
     cursor: pointer;
   }
   
-  .closeButton {
-    width: 100%;
+  .botao {
+    width: 100px;
+    height: 50px;
     padding: 10px;
     border-radius: 20px;
     justify-content: center;
@@ -62,5 +67,22 @@
     display: flex;
     background-color: #E08000;
     border: none;
+    margin: 10px;
+    margin-bottom: 20px;
   }
   
+  #username{
+    font-size: 50px;
+    letter-spacing: 2px;
+    background-color: #372022;
+    color: #E08000;
+    margin-top: 10px;
+    padding: 0px 40px 2px 40px;
+    border-radius: 20px;
+    border: #E08000 2px solid;
+  }
+
+  .botao:hover{
+    background-color: #e00000;
+    cursor: pointer;
+  }

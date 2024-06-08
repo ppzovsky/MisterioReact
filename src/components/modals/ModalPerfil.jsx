@@ -18,8 +18,6 @@ const ModalPerfil = ({ isOpen, onClose }) => {
   return (
     <div className={styles.modalOverlay}>
         <div className={styles.modalContent}>
-            <h2 className={styles.titulo}>{perfil.email}</h2>
-            <h2 className={styles.titulo}>{perfil.username}</h2>
             <div className={styles.imageGrid}>
                 <img
                 src={perfil.imageSrc}
@@ -27,9 +25,11 @@ const ModalPerfil = ({ isOpen, onClose }) => {
                 className={styles.imageOption}
                 />
             </div>
+            <h1 className={styles.titulo} id={styles.username}>{perfil.username}</h1>
+            <h2 className={styles.titulo}>{perfil.email}</h2>
             <button onClick={() => {
                     onClose();
-                }}></button>
+                }} className={styles.botao}>Sair</button>
         </div>
     </div>
   );

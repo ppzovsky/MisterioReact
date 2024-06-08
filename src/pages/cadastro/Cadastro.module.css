@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Jaini+Purva&display=swap');
 
 .corpo {
-    display: grid;
+    display: flex;
+    justify-content: center;
     place-items: center;
     height: 100vh;  
     width: 100vw;
@@ -29,7 +30,8 @@
 }
 .container {
     width: 400px;
-    padding: 2%;
+    height: 500px;
+    padding: 30px;
     border-radius: 5px;
     border: 3px solid #372022;
     background-color: #0E0506;
@@ -56,7 +58,7 @@
 }
 
 .registrar {
-    width: 100%;
+    width: 120px;
     padding: 10px;
     border-radius: 20px;
     justify-content: center;
@@ -67,6 +69,7 @@
     display: flex;
     background-color: #E08000;
     border: none;
+    margin-bottom: 20px;
 }
 
 .botaoContainer {
@@ -81,9 +84,45 @@
     border-radius: 20px;
     border: 3px solid #372022;
     width: 100%;
-    height: 33px;
-    padding: 10px 10px 10px;
+    height: 50px;
     font-size: 23px;
     color: #ffc881;
     font-family: "Germania One", system-ui;
+}
+
+.password{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.email{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nomeDetetive{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.botaoVoltar {
+    position: absolute;
+    left: 0;
+    width: 100px;
+    border: 0;
+    bottom: 0;
+    padding: 10px;
+    margin: 15px 10px 15px;
+    border-radius: 20px;
+    font-family: "Jaini Purva", system-ui; 
+    font-size: 25px;
+    background-color: #E08000;
+}
+
+.botaoVoltar:hover {
+    background-color: #7b4805;
+    cursor: pointer;
 }

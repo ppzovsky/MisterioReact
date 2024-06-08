@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from '../cadastro/Cadastro.module.css'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ModalCadastro from '../../components/modals/ModalCadastro'
 
 const Cadastro = () => {
@@ -70,8 +70,7 @@ const Cadastro = () => {
           <div 
           className={styles.icone}
           onClick={() => setModalAberto(true)} 
-          style={{ backgroundImage: `url(${imageSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-          >
+          style={{ backgroundImage: `url(${imageSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
 
           <div className={styles.nomeDetetive}>
@@ -114,9 +113,12 @@ const Cadastro = () => {
           {usuarioExistente ? <p>Nickname ja esta em uso!</p> : null }    
 
         </form>
+        <Link to="/login">
+          <button className={styles.botaoVoltar}>Voltar</button>
+        </Link>
       </div>
     
-     </div>
+    </div>
     
   )
 }

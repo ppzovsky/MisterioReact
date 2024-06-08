@@ -21,11 +21,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #372022;
+    background: #0E0506;
     padding: 20px;
     border-radius: 8px;
     max-width: 500px;
     width: 100%;
+    border: #E08000 2px solid;
   }
   
   .imageGrid {

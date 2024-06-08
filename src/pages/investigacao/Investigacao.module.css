@@ -26,7 +26,7 @@
 }
 
 .label {
-  margin: 10px 10px -5px 10px;
+  margin: 10px 10px -15px 10px;
   font-size: 20px;
 }
 
@@ -35,17 +35,21 @@
   text-align: center;
   display: grid;
   justify-content: center;
-  height: 80vh;
+  height: 90vh;
   width: 80vh;
 }
 
 .select {
+  margin: 20px 0 10px;
   padding: 0 1px;
   border-radius: 5px;
   max-width: 300px;
-  max-height: 30px;
+  height: 30px;
   background-color: #0E0506;
   color: #F2A633;
+  border: 0;
+  font-size: 20px;
+  font-family: "Germania One", system-ui;
 }
 
 option {
@@ -57,10 +61,12 @@ option {
   padding: 0 5px;
   border-radius: 5px;
   width: 235px;
-  max-height: 30px;
+  height: 30px;
   background-color: #0E0506;
   color: #F2A633;
   font-family: "Germania One", system-ui;
+  font-size: 20px;
+  border: 0;
 }
 
 

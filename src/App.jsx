@@ -3,7 +3,6 @@ import Sidebar from './components/sidebar/sidebar';
 import { useState } from 'react';
 import Audio from '../src/components/audio/Audio';
 
-
 function App() {
   const location = useLocation();
 
@@ -11,18 +10,22 @@ function App() {
   
   const [audio, setAudio] = useState(false);
 
-    function habilitaAudio(){
-        setAudio(!audio);
-    }
+  function habilitaAudio(){
+    setAudio(!audio);
+  }
 
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
       {routesWithoutSidebar.includes(location.pathname) ? null : <Sidebar />} 
-      <input name="Desligar música" type="checkbox" onClick={() => habilitaAudio()} style={{right:0, position:'absolute'}}/>
+      <div style={{ position: 'fixed', top: 0, right: 0 }}>
+        <label style={{ display: 'block', width: '40px', height: '20px', borderRadius: '5px'}}>
+          <input name="Desligar música" type="checkbox" style={{ width: '20px', height: '20px' }} onClick={() => habilitaAudio()} />
+        </label>
+      </div>
       <Audio mutado={!audio}/>
       <Outlet />
     </div>
   );
 }
-export default App;
 
+export default App;
