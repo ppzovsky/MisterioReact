@@ -1,25 +1,26 @@
 import { useEffect, useState } from 'react';
 import styles from './Vagoes.module.css';
 import axios from 'axios';
-import { IoIosArrowDropleft } from 'react-icons/io';
-import { IoIosArrowDropright } from 'react-icons/io';
+import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io';
 
 const Vagoes = () => {
   const [dados, setDados] = useState([]);
-  
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState('');
+  const [isZoomed, setIsZoomed] = useState(false);
+
   useEffect(() => {
-      axios.get('/vagoes.json')
-          .then(response => {
-              setDados(response.data);
-          })
-          .catch(error => {
-              console.error('Erro ao buscar dados:', error);
-          });
+    axios.get('/vagoes.json')
+      .then(response => {
+        setDados(response.data);
+      })
+      .catch(error => {
+        console.error('Erro ao buscar dados:', error);
+      });
   }, []);
 
   const vagoes = dados.slice(0);
-
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   const handlePrev = () => {
     setCurrentSlide((prevSlide) => (prevSlide > 0 ? prevSlide - 1 : vagoes.length - 1));
@@ -29,9 +30,23 @@ const Vagoes = () => {
     setCurrentSlide((prevSlide) => (prevSlide < vagoes.length - 1 ? prevSlide + 1 : 0));
   };
 
+  const openModal = (imgSrc) => {
+    setModalImage(imgSrc);
+    setIsModalOpen(true);
+    setIsZoomed(false); // Reset zoom state when opening a new image
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const toggleZoom = () => {
+    setIsZoomed((prevZoom) => !prevZoom);
+  };
+
   return (
     <div className={styles.carousel}>
-      <button onClick={handlePrev} className={styles.navButton}><IoIosArrowDropleft/></button>
+      <button onClick={handlePrev} className={styles.navButton}><IoIosArrowDropleft /></button>
       <div className={styles.carouselContent}>
         {vagoes.map((slide, index) => (
           <div
@@ -39,12 +54,32 @@ const Vagoes = () => {
             className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
           >
             <h1>{slide.title}</h1>
-            <img src={slide.imgSrc} alt={slide.title} />
+            <img
+              src={slide.imgSrc}
+              alt={slide.title}
+              onClick={() => openModal(slide.imgSrc)}
+              className={styles.carouselImage}
+            />
             <div className={styles.comentario}>{slide.description}</div>
           </div>
         ))}
       </div>
-      <button onClick={handleNext} className={styles.navButton}><IoIosArrowDropright/></button>
+      <button onClick={handleNext} className={styles.navButton}><IoIosArrowDropright /></button>
+
+      {isModalOpen && (
+        <div className={styles.modal} onClick={closeModal}>
+          <span className={styles.close} onClick={closeModal}>&times;</span>
+          <img
+            className={`${styles.modalContent} ${isZoomed ? styles.zoomed : ''}`}
+            src={modalImage}
+            alt="Ampliada"
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent closing the modal when clicking the image
+              toggleZoom();
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };
