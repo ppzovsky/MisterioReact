@@ -4,7 +4,7 @@ import Sidebar from './components/sidebar/sidebar';
 function App() {
   const location = useLocation();
 
-  const routesWithoutSidebar = ['/']; 
+  const routesWithoutSidebar = ['/','/login','/cadastro']; 
 
   return (
     <div>

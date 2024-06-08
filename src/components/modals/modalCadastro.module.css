@@ -1,0 +1,66 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .titulo{
+    align-items: center;
+    font-family: "Jaini Purva", system-ui; 
+    margin-bottom: 20px;
+    color: #E08000;
+  }
+  
+  .modalContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #372022;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .imageGrid img{
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+
+  .imageGrid img:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px #c58f48;
+  }
+  
+  .imageOption {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .closeButton {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    font-family: "Jaini Purva", system-ui; 
+    font-size: 25px; 
+    place-items: center;
+    align-items: center;
+    display: flex;
+    background-color: #E08000;
+    border: none;
+  }
+  

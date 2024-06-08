@@ -11,13 +11,16 @@ import { IoIosArrowForward } from "react-icons/io";
 import lupa from '../../assets/img/lupa.png';
 import logo from '../../assets/img/logo.png';
 import { Link } from 'react-router-dom';
+import ModalPerfil from '../modals/ModalPerfil';
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [modalAberto, setModalAberto] = useState(false);
 
     const handleToggleSidebar = () => {
         setIsOpen(!isOpen);
     };
+
 
     return (
         <nav className={`${styles.sidebar} ${isOpen ? styles.openSidebar : ''}`}>
@@ -28,6 +31,7 @@ const Sidebar = () => {
                             src={isOpen ? logo : lupa}
                             alt="Logo"
                             style={{ width: 'auto', height: isOpen ? '100px' : '60px' }}
+                             className={styles.logoImage}
                         />
                     </Link>
                 </div>
@@ -68,18 +72,24 @@ const Sidebar = () => {
                 </button>
             </div>
             <div className={styles.logout}>
-                
-            <Link to="/">
-                    <button className={styles.perfilBtn}>
-                    <FaUser />
+                <ul className={styles.sideItemsLog}>                
+                    <li className={`${styles.sideItem} ${styles.perfilBtn}`}
+                    onClick={() => setModalAberto(true)}>
+                        <FaUser />
                         <span className={styles.itemDescription}>Perfil</span>
-                    </button>
-                </Link>
-                <button className={styles.logoutBtn}>
-                <MdLogout />
-                    <span className={styles.itemDescription}>Logout</span>
-                </button>
+                    </li>
+                    <Link to='/'>
+                        <li className={`${styles.sideItem} ${styles.logoutBtn}`}>
+                        <MdLogout />
+                        <span className={styles.itemDescription}>Logout</span>
+                    </li>
+                    </Link>
+                </ul>
             </div>
+            <ModalPerfil
+                isOpen={modalAberto}
+                onClose={() => setModalAberto(false)}
+            />
         </nav>
     );
 };

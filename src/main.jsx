@@ -9,6 +9,8 @@ import Vagoes from './pages/vagoes/Vagoes.jsx'
 import App from './App.jsx'
 import Crime from './pages/crime/Crime.jsx'
 import Investigacao from './pages/investigacao/Investigacao.jsx'
+import Login from './pages/login/Login.jsx'
+import Cadastro from './pages/cadastro/Cadastro.jsx'
 
 const router = createBrowserRouter([
   {
@@ -39,12 +41,20 @@ const router = createBrowserRouter([
           path: "/investigacao",
           element: <Investigacao />
         },
+        {
+          path: "/login",
+          element: <Login />
+        },
+        {
+          path: "/cadastro",
+          element: <Cadastro />
+        },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+      <RouterProvider router={router}/>
   </React.StrictMode>,
 )

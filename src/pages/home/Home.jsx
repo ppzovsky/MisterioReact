@@ -11,7 +11,7 @@ function Home() {
           <img src={logo} alt="" className={style.logo}/>
         </div>
         <div className={style.butaoContainer}>
-          <Link to='/suspeitos'>
+          <Link to='/login'>
             <button className={style.butao}>COMECE A INVESTIGAÇÃO</button>
           </Link>
         </div>

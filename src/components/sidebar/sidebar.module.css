@@ -64,6 +64,29 @@ main {
     font-family: "Germania One", system-ui
 }
 
+.sideItemsLog {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    font-family: "Germania One", system-ui;
+    font-size: 35px;
+    max-width: 100px;
+}
+
+.sideItemsLog a{
+    text-decoration: none;
+    color: #0E0506;
+}
+
+.sideItemsLog span{
+    font-size: 15px;
+}
+
+.sideItemsLog svg{
+   width: 40px;
+}
+
 .sideItem {
     border-radius: 8px;
     padding: 14px;
@@ -83,7 +106,7 @@ main {
 }
 
 .logoutBtn:hover {
-    background-color: #4d1616;
+    background-color: #e00000;
 }
 .perfilBtn:hover {
     background-color: #7b4805;
@@ -110,43 +133,37 @@ main {
     padding: 12px;
 }
 
-.logoutBtn {
-    border: none;
-    padding: 12px;
-    font-size: 14px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    border-radius: 8px;
-    text-align: start;
-    cursor: pointer;
-    background-color: #E08000;
-    font-family: "Germania One", system-ui
+.logoImage {
+    transition: height 1s ease, width 1s ease;
 }
 
-.perfilBtn{
+.logoutBtn, .perfilBtn {
     border: none;
     padding: 12px;
     font-size: 14px;
     display: flex;
     gap: 20px;
-    margin-bottom: 10px;
     align-items: center;
     border-radius: 8px;
     text-align: start;
     cursor: pointer;
-    background-color: #E08000;
+    background-color: #E08000;      
     font-family: "Germania One", system-ui
 }
 
 .openBtn {
     position: absolute;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    justify-content: center ;
     top: 30px;
     right: -10px;
     background-color: #E08000;
     color: #0E0506;
     border-radius: 100%;
     width: 20px;
+    font-size: 20px;
     height: 20px;
     border: none;
     cursor: pointer;
