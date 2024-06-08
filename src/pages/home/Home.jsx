@@ -2,6 +2,7 @@ import style from './Home.module.css'
 import logo from '../../assets/img/logo/logo.png'
 import { Link } from 'react-router-dom'
 
+
 function Home() {
 
   return (
@@ -16,6 +17,7 @@ function Home() {
           </Link>
         </div>
       </form>
+      
     </>
   )
 }
