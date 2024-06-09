@@ -27,6 +27,8 @@
     background-color: #0E0506;
     border: 5px solid #372022;
     cursor: pointer;
+    font-family: "Jaini Purva", system-ui;
+    color: #E08000;
 }
 .container {
     width: 400px;
@@ -88,6 +90,7 @@
     font-size: 23px;
     color: #ffc881;
     font-family: "Germania One", system-ui;
+    margin: 10px;
 }
 
 .password{
@@ -125,4 +128,22 @@
 .botaoVoltar:hover {
     background-color: #7b4805;
     cursor: pointer;
+}
+.errorMessage{
+    color:#e05600;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-family: "Jaini Purva", system-ui;
+    display: inline-block;
+    animation: flag 3s infinite;
+}
+
+@keyframes flag{
+    0%, 50%, 100% {
+        transform: translateY(0); 
+      }
+      25%, 75% {
+        transform: translateY(5px); 
+      }
 }

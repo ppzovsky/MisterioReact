@@ -1,6 +1,7 @@
 import styles from './personagens.module.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { motion } from 'framer-motion';
 
 const Personagens = () => {
     const [dados, setDados] = useState([]);
@@ -24,6 +25,12 @@ const Personagens = () => {
     };
 
     return (
+        <motion.div
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1, x: 0 }} 
+        exit={{ opacity: 0, x: 100 }}
+        transition={{ ease: "easeOut", duration: 2 }} 
+        >
             <div className={styles['selecao-de-personagens']}>
                 <section className={styles.personagens}>
                     <ul className={styles['lista-de-personagens']}>
@@ -57,6 +64,7 @@ const Personagens = () => {
                     </section>
                 )}
             </div>
+        </motion.div>
     );
 };
 

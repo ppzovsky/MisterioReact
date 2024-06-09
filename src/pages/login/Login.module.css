@@ -3,7 +3,7 @@
 
 .corpo {
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
     width: 100vw;
     height: 100vh;
@@ -41,6 +41,13 @@
     width: 250px;
 }
 
+.formulary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 .embarcar {
     background-color: #50875C;
     border: none;
@@ -72,7 +79,7 @@
     font-size: 25px;   
 }
 
-input {
+.input {
     background-color: #0E0506;
     border-radius: 20px;
     border: 3px solid #372022;
@@ -112,5 +119,24 @@ input {
 
 .fazerLogin{
     width: 100%;
+}
+
+.errorMessage{
+    color:#e05600;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-family: "Jaini Purva", system-ui;
+    display: inline-block;
+    animation: flag 3s infinite;
+}
+
+@keyframes flag{
+    0%, 50%, 100% {
+        transform: translateY(0); 
+      }
+      25%, 75% {
+        transform: translateY(5px); 
+      }
 }
 

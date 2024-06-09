@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Investigacao.module.css';
 import image from '../../assets/img/logo/logoInvestigacao.png';
+import { motion } from 'framer-motion';
 
 function Investigacao() {
   const [choice, setChoice] = useState('option1');
@@ -22,7 +23,12 @@ function Investigacao() {
   };
 
   return (
-    <>
+    <motion.div
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1, x: 0 }} 
+        exit={{ opacity: 0, x: 100 }}
+        transition={{ ease: "easeOut", duration: 2 }} 
+        >
       <div className={styles.container}>
         <div className={styles.papel}>
           <form onSubmit={handleSubmit} className={styles.form}>
@@ -72,7 +78,7 @@ function Investigacao() {
           </form>
         </div>
       </div>
-    </>
+    </motion.div>
   );
   
 }

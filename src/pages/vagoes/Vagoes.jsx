@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './Vagoes.module.css';
 import axios from 'axios';
 import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io';
+import { motion } from 'framer-motion';
 
 const Vagoes = () => {
   const [dados, setDados] = useState([]);
@@ -45,42 +46,49 @@ const Vagoes = () => {
   };
 
   return (
-    <div className={styles.carousel}>
-      <button onClick={handlePrev} className={styles.navButton}><IoIosArrowDropleft /></button>
-      <div className={styles.carouselContent}>
-        {vagoes.map((slide, index) => (
-          <div
-            key={index}
-            className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
-          >
-            <h1>{slide.title}</h1>
-            <img
-              src={slide.imgSrc}
-              alt={slide.title}
-              onClick={() => openModal(slide.imgSrc)}
-              className={styles.carouselImage}
-            />
-            <div className={styles.comentario}>{slide.description}</div>
-          </div>
-        ))}
-      </div>
-      <button onClick={handleNext} className={styles.navButton}><IoIosArrowDropright /></button>
-
-      {isModalOpen && (
-        <div className={styles.modal} onClick={closeModal}>
-          <span className={styles.close} onClick={closeModal}>&times;</span>
-          <img
-            className={`${styles.modalContent} ${isZoomed ? styles.zoomed : ''}`}
-            src={modalImage}
-            alt="Ampliada"
-            onClick={(e) => {
-              e.stopPropagation(); // Prevent closing the modal when clicking the image
-              toggleZoom();
-            }}
-          />
+    <motion.div
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1, x: 0 }} 
+        exit={{ opacity: 0, x: 100 }}
+        transition={{ ease: "easeOut", duration: 2 }} 
+        >
+      <div className={styles.carousel}>
+        <button onClick={handlePrev} className={styles.navButton}><IoIosArrowDropleft /></button>
+        <div className={styles.carouselContent}>
+          {vagoes.map((slide, index) => (
+            <div
+              key={index}
+              className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
+            >
+              <h1>{slide.title}</h1>
+              <img
+                src={slide.imgSrc}
+                alt={slide.title}
+                onClick={() => openModal(slide.imgSrc)}
+                className={styles.carouselImage}
+              />
+              <div className={styles.comentario}>{slide.description}</div>
+            </div>
+          ))}
         </div>
-      )}
-    </div>
+        <button onClick={handleNext} className={styles.navButton}><IoIosArrowDropright /></button>
+
+        {isModalOpen && (
+          <div className={styles.modal} onClick={closeModal}>
+            <span className={styles.close} onClick={closeModal}>&times;</span>
+            <img
+              className={`${styles.modalContent} ${isZoomed ? styles.zoomed : ''}`}
+              src={modalImage}
+              alt="Ampliada"
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent closing the modal when clicking the image
+                toggleZoom();
+              }}
+            />
+          </div>
+        )}
+      </div>
+     </motion.div>
   );
 };
 

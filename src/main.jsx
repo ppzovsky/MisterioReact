@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Sobre from './pages/sobre/Sobre.jsx'
 import Home from './pages/home/Home.jsx'
@@ -53,8 +52,10 @@ const router = createBrowserRouter([
   },
 ]);
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router}
+      />
   </React.StrictMode>,
 )

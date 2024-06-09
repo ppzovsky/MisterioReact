@@ -3,6 +3,7 @@ import styles from '../cadastro/Cadastro.module.css'
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import ModalCadastro from '../../components/modals/ModalCadastro'
+import { motion } from 'framer-motion';
 
 const Cadastro = () => {
     const [username, setUsername] = useState("");
@@ -63,14 +64,20 @@ const Cadastro = () => {
     };
   
   return (
-    <div className={styles.corpo}>
-      
+    <motion.div
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1, x: 0 }} 
+        exit={{ opacity: 0, x: 100 }}
+        transition={{ ease: "easeOut", duration: 2 }} 
+        > 
+        <div className={styles.corpo}>
       <div className={styles.container}>
       <form onSubmit={handleCadastro} className={styles.formulario}>
           <div 
           className={styles.icone}
           onClick={() => setModalAberto(true)} 
           style={{ backgroundImage: `url(${imageSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+           {imageSrc ? null : 'Escolha seu avatar'}
           </div>
 
           <div className={styles.nomeDetetive}>
@@ -109,17 +116,15 @@ const Cadastro = () => {
             onClose={() => setModalAberto(false)}
             onSelectImage={setImageSrc}
           />
-          {cadastroSucesso ? <p>Cadastro realizado com sucesso!</p> : null}
-          {usuarioExistente ? <p>Nickname ja esta em uso!</p> : null }    
+          {usuarioExistente ? <p className={styles.errorMessage}>Nickname já esta em uso!</p> : null }    
 
         </form>
         <Link to="/login">
           <button className={styles.botaoVoltar}>Voltar</button>
         </Link>
       </div>
-    
     </div>
-    
+    </motion.div>
   )
 }
 
