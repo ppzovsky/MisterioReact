@@ -1,28 +1,32 @@
 [
     {
-        "nome": "CESAR D.",
-        "classe": "Dragão",
-        "imagem": "./src/assets/img/dragao.jpg"
+        "nome": "César G.",
+        "classe": "Assassino",
+        "imagem": "./src/assets/img/quemsomos/cesar.png",
+        "linkedin": "https://www.linkedin.com/in/cesarguerrapeixe/"
     },
     {
-        "nome": "EMANUEL F.",
-        "classe": "Dragão",
-        "imagem": "./src/assets/img/dragao.jpg"
+        "nome": "Emanuel F.",
+        "classe": "Elfo",
+        "imagem": "./src/assets/img/quemsomos/emanuel.png",
+        "linkedin": "https://www.linkedin.com/in/emanuel-f-2565181b6/"
     },
     {
-        "nome": "JOÃO PEDRO",
+        "nome": "João Pedro",
         "classe": "Dragão",
-        "imagem": "./src/assets/img/dragao.jpg"
+        "imagem": "./src/assets/img/quemsomos/joao.png",
+        "linkedin": "https://www.linkedin.com/in/jo%C3%A3o-pedro-soares-164964236/"
     },
     {
-        "nome": "MADU",
-        "classe": "Dragão",
-        "imagem": "./src/assets/img/dragao.jpg"
-    }, 
+        "nome": "Maria Eduarda",
+        "classe": "Bruxa",
+        "imagem": "./src/assets/img/quemsomos/madu.png",
+        "linkedin": "https://www.linkedin.com/in/maria-eduarda-goes-pelaggi/"
+    },
     {
-        "nome": "THIAGO M.",
-        "classe": "Dragão",
-        "imagem": "./src/assets/img/dragao.jpg"
+        "nome": "Thiago M.",
+        "classe": "Mutante",
+        "imagem": "./src/assets/img/quemsomos/thiago.png",
+        "linkedin": "https://www.linkedin.com/in/thiago-moura93/"
     }
-
 ]
