@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import Sidebar from './components/sidebar/sidebar';
-import Audio from '../src/components/audio/Audio';
+import Sidebar from '/src/components/sidebar/sidebar';
+import Audio from '/src/components/audio/Audio';
 
 function App() {
   const location = useLocation();

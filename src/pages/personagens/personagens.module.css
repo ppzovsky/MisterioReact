@@ -64,9 +64,9 @@
 .informacoes-personagem{
     position: absolute;
     top: 90%;
-    width: 100%;
-    height: 40%;
-    background-image: url('../../assets/img/texturas/pergaminhoTexto.png');
+    width: 40vw;
+    height: 30vh;
+    background-image: url('/src/assets/img/texturas/pergaminhoTexto.png');
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: center;

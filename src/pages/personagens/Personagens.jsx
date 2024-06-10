@@ -1,4 +1,4 @@
-import styles from './personagens.module.css';
+import styles from '/src/pages/personagens/personagens.module.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
@@ -44,7 +44,7 @@ const Personagens = () => {
                                 onMouseEnter={() => handleMouseEnter(personagem)}
                             >
                                 <img 
-                                    src={`../src/assets/img/cards/${personagem.id}.png`} 
+                                    src={`/src/assets/img/cards/${personagem.id}.png`} 
                                     className={styles.cardPersonagem} 
                                     alt={`Personagem ${personagem.nome}`} 
                                 />
@@ -57,7 +57,7 @@ const Personagens = () => {
                         <div className={styles.titulo}>
                             <h2 className={styles['nome-personagem']}>{personagemSelecionado.nome}</h2>
                         </div>
-                        <img className={styles['personagem-grande']} src={`../src/assets/img/personas/card-${personagemSelecionado.id}.png`} alt={`Personagem Selecionado`} />
+                        <img className={styles['personagem-grande']} src={`/src/assets/img/personas/card-${personagemSelecionado.id}.png`} alt={`Personagem Selecionado`} />
                         <div className={styles['informacoes-personagem']}>
                             <p className={styles['descricao-personagem']}>{personagemSelecionado.lore}</p>
                         </div>
