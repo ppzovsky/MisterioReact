@@ -12,7 +12,7 @@
     {
       "id"  : "robo",
       "nome": "XR-47",
-      "lore": "XR-47 é um robô mercenário especializado no comércio de itens ilegais, desde armas até artefatos raros. Com uma inteligência artificial avançada e uma aparência robusta, XR-47 é eficiente e implacável em seus negócios. Embora sua programação inicial fosse para fins pacíficos, ele foi reprogramado para o submundo do crime, tornando-se uma figura temida e respeitada."
+      "lore": "XR-47 é uma robô mercenária especializada no comércio de itens ilegais, desde armas até artefatos raros. Com uma inteligência artificial avançada e uma aparência robusta, XR-47 é eficiente e implacável em seus negócios. Embora sua programação inicial fosse para fins pacíficos, ela foi reprogramada para o submundo do crime, tornando-se uma figura temida e respeitada."
     },
     {
       "id"  : "pirata",
@@ -22,7 +22,6 @@
     {
       "id"  : "demonio",
       "nome": "Emberflame",
-      "lore": "Ember é uma jovem demônio com cabelo de fogo e um espírito travesso, mas não é maligna. Ela vive em um pequeno vilarejo demoníaco e leva uma vida comum para um demônio, fazendo travessuras e brincando com seus amigos. Lilith é curiosa e cheia de energia, sempre pronta para novas aventuras, mas seu coração é puro e ela valoriza a amizade acima de tudo."
+      "lore": "Ember é um jovem demônio sem gênero, extremamente lindo e a imagem da perfeição. Com cabelo de fogo e um espírito travesso, Ember não é maligno. Sua voz é extremamente alta e imponente, parecendo misturar várias vozes. Vive em um pequeno vilarejo demoníaco e leva uma vida comum, fazendo travessuras e brincando com seus amigos. Quando irritado, Ember tende a tacar fogo nas coisas."
     }
   ]
-  
