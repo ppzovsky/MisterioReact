@@ -1,6 +1,6 @@
-import folha from '../../assets/img/scrolls/folha.png'
-import bruxa from '../../assets/img/personas/card-bruxa.png'
-import card from '../../assets/img/cards/bruxa.png'
+import folha from '/assets/img/scrolls/folha.png'
+import bruxa from '/assets/img/personas/card-bruxa.png'
+import card from '/assets/img/cards/bruxa.png'
 import style from './Crime.module.css'
 import { motion } from 'framer-motion'
 

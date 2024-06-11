@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './Investigacao.module.css';
-import image from '../../assets/img/logo/logoInvestigacao.png';
+import image from '/assets/img/logo/logoInvestigacao.png';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';

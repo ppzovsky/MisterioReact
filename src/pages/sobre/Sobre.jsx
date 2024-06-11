@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './sobre.module.css';
-import logo from '../../assets/img/logo.png'
+import logo from '/assets/img/logo.png'
 import axios from 'axios';
 import { motion } from 'framer-motion';
 

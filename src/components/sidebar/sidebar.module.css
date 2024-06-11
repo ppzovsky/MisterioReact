@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
     max-width: 10vw;
     background-color: transparent;
-    background-image: url('../src/assets/img/background/fundoTrem.png');
+    background-image: url('/assets/img/background/fundoTrem.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

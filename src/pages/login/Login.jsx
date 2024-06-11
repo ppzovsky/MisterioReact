@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from '../login/Login.module.css';
-import logo from '../../assets/logo.png';
+import logo from '/assets/logo.png';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';

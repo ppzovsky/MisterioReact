@@ -1,14 +1,14 @@
 .fichario {
-    display: flex; /* Alinha abas e conteúdo lado a lado */
+    display: flex; 
   }
   
   .abas {
-    width: 200px; /* Largura das abas */
+    width: 200px; 
   }
   
   .conteudo {
-    position: relative; /* Para posicionar as páginas */
-    width: 400px; /* Largura do conteúdo */
+    position: relative; 
+    width: 400px; 
   }
   
   .pagina {

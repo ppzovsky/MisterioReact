@@ -1,5 +1,5 @@
 import style from './Home.module.css'
-import logo from '../../assets/img/logo/logo.png'
+import logo from '/assets/img/logo/logo.png'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion';
 

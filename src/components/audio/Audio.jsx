@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import music from '../../assets/audio/WhisperintheShadows.mp3';
+import music from '/assets/audio/WhisperintheShadows.mp3';
 import { FaCompactDisc } from 'react-icons/fa'; 
 import styles from './audio.module.css'; 
 

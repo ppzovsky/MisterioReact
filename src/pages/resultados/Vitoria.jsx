@@ -1,6 +1,6 @@
 import styles from "./vitoria.module.css"
 import { motion } from "framer-motion";
-import venceu from '../../assets/img/mensagem/vitoria.png'
+import venceu from '/assets/img/mensagem/vitoria.png'
 import { useNavigate } from "react-router-dom";
 
 function Vitoria(){
@@ -13,7 +13,7 @@ function Vitoria(){
         transition={{ ease: "easeOut", duration: 3 }}>
             <div className={styles.vitoria}>
                 <img src={venceu} alt="" />
-                <button className={styles.botaoVoltar} onClick={() => navigate('/')}>Voltar</button>
+                <button className={styles.botaoVoltar} onClick={() => navigate('/crime')}>Voltar</button>
             </div>
         </motion.div>
     )
