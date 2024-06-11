@@ -61,7 +61,7 @@ main {
     flex-direction: column;
     gap: 8px;
     list-style: none;
-    font-family: "Germania One", system-ui
+    font-family: "Germania One", system-ui;
 }
 
 .sideItemsLog {
