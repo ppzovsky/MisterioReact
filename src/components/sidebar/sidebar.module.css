@@ -56,7 +56,8 @@ main {
     justify-content: center;
 }
 
-.sideItems {
+.sideItems,
+.sideItemsLog {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -66,42 +67,57 @@ main {
 }
 
 .sideItemsLog {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    list-style: none;
-    font-family: "Germania One", system-ui;
     font-size: 35px;
     max-width: 100px;
 }
 
-.sideItemsLog a{
+.sideItemsLog a {
     text-decoration: none;
     color: #0E0506;
 }
 
-.sideItemsLog span{
+.sideItemsLog span {
     font-size: 15px;
 }
 
-.sideItemsLog svg{
-   width: 40px;
+.sideItemsLog svg {
+   width: 24px; 
+   height: 24px; 
 }
 
-.sideItem {
-    border-radius: 8px;
+.sideItem,
+.logoutBtn,
+.perfilBtn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
     padding: 14px;
+    border-radius: 8px;
+    background-color: #E08000;
+    color: #0E0506;
     cursor: pointer;
+    font-family: "Germania One", system-ui;
+    border: none;
+    text-align: start;
+    transition: background-color 0.3s;
 }
 
-.sideItem.active {
+.sideItem svg,
+.logoutBtn svg,
+.perfilBtn svg {
+    width: 24px; 
+    height: 24px; 
+}
+
+.sideItem.active,
+.logoutBtn.active,
+.perfilBtn.active {
     background-color: #E08000;
 }
 
-.sideItem.active:hover {
-    background-color: #7b4805;
-}
-
+.sideItem.active:hover,
+.logoutBtn:hover,
+.perfilBtn:hover,
 .openBtn:hover {
     background-color: #7b4805;
 }
@@ -109,24 +125,12 @@ main {
 .logoutBtn:hover {
     background-color: #e00000;
 }
-.perfilBtn:hover {
-    background-color: #7b4805;
-}
 
-.sideItem a {
+.sideItem a,
+.logoutBtn,
+.perfilBtn {
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #0E0506;
-}
-
-.sideItem a i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
 }
 
 .logout {
@@ -138,40 +142,18 @@ main {
     transition: height 1s ease, width 1s ease;
 }
 
-.logoutBtn, .perfilBtn {
-    border: none;
-    padding: 12px;
-    font-size: 14px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    border-radius: 8px;
-    text-align: start;
-    cursor: pointer;
-    background-color: #E08000;      
-    font-family: "Germania One", system-ui
-}
-
 .openBtn {
     position: absolute;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    justify-content: center ;
     top: 30px;
     right: -10px;
     background-color: #E08000;
     color: #0E0506;
     border-radius: 100%;
     width: 20px;
-    font-size: 20px;
     height: 20px;
     border: none;
     cursor: pointer;
-}
-
-.openBtn {
-    transition: transform .3s ease;
+    transition: transform 1s ease;
 }
 
 .openSidebar .openBtn {
@@ -179,13 +161,13 @@ main {
 }
 
 .itemDescription {
-    width: 0px;
+    width: 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 14px;
-    transition: width .6s;
-    height: 0px;
+    transition: width 0.6s, height 0.6s;
+    height: 0;
 }
 
 .sidebar.openSidebar {
@@ -197,7 +179,8 @@ main {
     height: auto;
 }
 
-.sidebar.openSidebar .sideItem a {
-    justify-content: flex-start;
-    gap: 14px;
+.sidebar.openSidebar .sideItem,
+.sidebar.openSidebar .logoutBtn,
+.sidebar.openSidebar .perfilBtn {
+    justify-content: center;
 }

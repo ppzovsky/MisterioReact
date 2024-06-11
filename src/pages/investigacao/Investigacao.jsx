@@ -11,10 +11,21 @@ function Investigacao() {
   const [motivo, setMotivo] = useState('')
   const [modo, setModo] = useState('')
   const [id, setId] = useState('')
+  const [usuario, setUsuario] = useState(null)
   const [palpiteSucesso, setPalpiteSucesso] = useState(false)
   const [ganhou, setGanhou] = useState()
   const [botao, setBotao] = useState(false)
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const dados = localStorage.getItem('login');
+    if (dados) {
+      setUsuario(JSON.parse(dados));
+    }
+    else{
+      setUsuario(null);
+    }
+  }, []);
 
   useEffect(() => {
     if (assassino === 'option1' || motivo === '' || modo === '') {
@@ -46,7 +57,8 @@ function Investigacao() {
       assassino: assassino,
       motivo: motivo,
       modo: modo,
-      id: id
+      id: id,
+      usuario: usuario.username,
     };
 
     try {

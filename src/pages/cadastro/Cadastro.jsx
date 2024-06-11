@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import classNames from 'classnames';
 import styles from '../cadastro/Cadastro.module.css';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
@@ -31,16 +30,11 @@ const Cadastro = () => {
     }, []);
 
     useEffect(() => {
-        validateForm();
-    }, [username, password, email, imageSrc]);
-
-    const validateForm = () => {
-        if (username && password && email && imageSrc) {
-            setIsFormValid(true);
-        } else {
+        if(username && password && email && imageSrc){
             setIsFormValid(false);
         }
-    };
+        else setIsFormValid(true);
+    }, [username, password, email, imageSrc]);
 
     const handleCadastro = async (event) => {
         event.preventDefault();
@@ -118,8 +112,8 @@ const Cadastro = () => {
                         </div>
                         <div className={styles.botaoContainer}>
                             <button 
-                                className={classNames(styles.registrar, { [styles.registrarDesabilitado]: !isFormValid })}
-                                disabled={!isFormValid}
+                                className={`${styles.registrar} ${styles.registrarDesabilitado}`}
+                                disabled={isFormValid}
                             >
                                 Registrar
                             </button>
