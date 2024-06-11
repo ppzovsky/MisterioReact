@@ -46,7 +46,6 @@ function Investigacao() {
     if(botaoClicado){
       if(assassino == resultado){
         navigate('/vitoria')
-        return;
       }else{
         setGanhou(false)
         navigate('/derrota')
