@@ -62,6 +62,7 @@ main {
     gap: 8px;
     list-style: none;
     font-family: "Germania One", system-ui;
+    cursor: pointer;
 }
 
 .sideItemsLog {

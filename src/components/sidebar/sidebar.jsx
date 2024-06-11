@@ -10,23 +10,30 @@ import { MdLogout } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
 import lupa from '../../assets/img/lupa.png';
 import logo from '../../assets/img/logo.png';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import ModalPerfil from '../modals/ModalPerfil';
+import { motion } from 'framer-motion';
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [modalAberto, setModalAberto] = useState(false);
+    const navigate = useNavigate();
 
     const handleToggleSidebar = () => {
         setIsOpen(!isOpen);
     };
+
+    const logout = () => {
+        localStorage.clear();
+        navigate('/');
+    }
 
 
     return (
         <nav className={`${styles.sidebar} ${isOpen ? styles.openSidebar : ''}`}>
             <div className={styles.sidebarContent}>
                 <div className={styles.logo}>
-                    <Link to='/'>
+                    <Link to='/crime'>
                         <img
                             src={isOpen ? logo : lupa}
                             alt="Logo"
@@ -36,35 +43,25 @@ const Sidebar = () => {
                     </Link>
                 </div>
                 <ul className={styles.sideItems}>
-                    <li className={`${styles.sideItem} ${styles.active}`}>
-                        <Link to="/crime">
+                    <li className={`${styles.sideItem} ${styles.active}`} onClick={() =>navigate('/crime')}>
                             <FaSkull />
                             <span className={styles.itemDescription}>Crime</span>
-                        </Link>
                     </li>
-                    <li className={`${styles.sideItem} ${styles.active}`}>
-                        <Link to="/suspeitos">
+                    <li className={`${styles.sideItem} ${styles.active}`} onClick={() =>navigate('/suspeitos')}>
                         <RiFootprintFill />
                             <span className={styles.itemDescription}>Suspeitos</span>
-                        </Link>
                     </li>
-                    <li className={`${styles.sideItem} ${styles.active}`}>
-                        <Link to="/vagoes">
+                    <li className={`${styles.sideItem} ${styles.active}`} onClick={() =>navigate('/vagoes')}>
                         <FaTrainSubway />
                             <span className={styles.itemDescription}>Vagões</span>
-                        </Link>
                     </li>
-                    <li className={`${styles.sideItem} ${styles.active}`}>
-                        <Link to="/investigacao">
+                    <li className={`${styles.sideItem} ${styles.active}`} onClick={() =>navigate('/investigacao')}>
                             <FaUserSecret />
                             <span className={styles.itemDescription}>Investigação</span>
-                        </Link>
                     </li>
-                    <li className={`${styles.sideItem} ${styles.active}`}>
-                        <Link to="/sobre">
+                    <li className={`${styles.sideItem} ${styles.active}`} onClick={() =>navigate('/sobre')}>
                         <FaQuestion />
                             <span className={styles.itemDescription}>Quem somos?</span>
-                        </Link>
                     </li>
                 </ul>
                 <button className={styles.openBtn} onClick={handleToggleSidebar}>
@@ -72,18 +69,18 @@ const Sidebar = () => {
                 </button>
             </div>
             <div className={styles.logout}>
-                <ul className={styles.sideItemsLog}>                
-                    <li className={`${styles.sideItem} ${styles.perfilBtn}`}
-                    onClick={() => setModalAberto(true)}>
-                        <FaUser />
-                        <span className={styles.itemDescription}>Perfil</span>
+                <ul className={styles.sideItemsLog}>
+                    <motion.div> 
+                        <motion.li className={`${styles.sideItem} ${styles.perfilBtn}`}
+                            onClick={() => setModalAberto(true)}>
+                            <FaUser />
+                            <motion.span className={styles.itemDescription}>Perfil</motion.span>
+                        </motion.li>
+                    </motion.div>
+                    <li className={`${styles.sideItem} ${styles.logoutBtn}`} onClick={logout}>
+                    <MdLogout />
+                    <span className={styles.itemDescription}>Logout</span>
                     </li>
-                    <Link to='/'>
-                        <li className={`${styles.sideItem} ${styles.logoutBtn}`}>
-                        <MdLogout />
-                        <span className={styles.itemDescription}>Logout</span>
-                    </li>
-                    </Link>
                 </ul>
             </div>
             <ModalPerfil
