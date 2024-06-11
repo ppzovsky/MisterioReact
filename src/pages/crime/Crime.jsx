@@ -16,12 +16,16 @@ function Crime() {
       <div className={style.container}>
         <div className={style.folha}>
           <img src={folha} alt=""/>
+            <p>O crime aconteceu em um trem mágico que tem como objetivo transportar vilões entre qualquer época e lugar do multiverso. Os vagões são a prova de som, e se adaptam aos gostos e hábitos do passageiro. 
+                Em um destes vagões, a vítima chamada Morgana Shadowveil foi encontrada. Morgana é uma bruxa sábia e reclusa que vive em uma cabana escondida na floresta encantada. Conhecida por seus profundos conhecimentos em feitiçaria e poções, ela ajuda os aldeões em segredo, embora muitos a temam. Sua natureza reservada a mantém distante dos outros, mas sua bondade é evidente para aqueles que a conhecem verdadeiramente.
+                Durante a investigação existe um feitiço onde os suspeitos não conseguem mentir, porém alguém burlou esta regra, e este que consegue mentir, também consegue ferir outros passageiros.</p>
         </div>
         <div className={style.vitma}>
           <img src={bruxa} alt="" className={style.bruxa} />
           <img src={card} alt="" className={style.card} />
         </div>
       </div>
+
     </motion.div>
   )
 }

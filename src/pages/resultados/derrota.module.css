@@ -1,0 +1,32 @@
+.derrota{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.derrota img{
+    width: 500px;
+}
+
+.derrota button{
+    width: 100px;
+    border: 0;
+    bottom: 0;
+    padding: 10px;
+    margin: 15px 10px 15px;
+    border-radius: 20px;
+    font-family: "Jaini Purva", system-ui; 
+    font-size: 25px;
+    background-color: #E08000;
+    
+}
+
+.vitoria button:hover{
+    background-color: #7b4805;
+    cursor: pointer;
+}

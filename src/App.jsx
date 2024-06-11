@@ -5,7 +5,7 @@ import Audio from '../src/components/audio/Audio';
 function App() {
   const location = useLocation();
 
-  const routesWithoutSidebar = ['/','/login','/cadastro'];
+  const routesWithoutSidebar = ['/','/login','/cadastro','/derrota','/vitoria'];
 
   return (
     <div>

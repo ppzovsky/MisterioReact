@@ -10,6 +10,8 @@ import Crime from './pages/crime/Crime.jsx'
 import Investigacao from './pages/investigacao/Investigacao.jsx'
 import Login from './pages/login/Login.jsx'
 import Cadastro from './pages/cadastro/Cadastro.jsx'
+import Derrota from './pages/resultados/Derrota.jsx'
+import Vitoria from './pages/resultados/Vitoria.jsx'
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
         {
           path: "/cadastro",
           element: <Cadastro />
+        },
+        {
+          path: "/derrota",
+          element: <Derrota />
+        },
+        {
+          path: "/vitoria",
+          element: <Vitoria />
         },
     ],
   },
