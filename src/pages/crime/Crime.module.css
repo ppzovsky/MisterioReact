@@ -1,4 +1,7 @@
-.container{
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,20 +9,40 @@
   width: 100vw;
 }
 
-.bruxa{
+.folha {
+  position: relative;
+}
+
+.folha img {
+  display: block;
+}
+
+.folha p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 50px 110px 50px 120px;
+  color: #372022;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: "Germania One", system-ui;
+}
+
+.bruxa {
   height: 500px;
   position: relative;
 }
 
-.card{
+.card {
   width: 150px;
   position: absolute;
-  bottom: 0; 
-  left: 53%; 
-  transform: translateX(-50%); 
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(120%);
 }
 
-.vitma{
+.vitima {
   position: relative;
   display: flex;
   justify-content: center;

@@ -2,36 +2,72 @@ import { useState, useEffect } from 'react';
 import styles from './Investigacao.module.css';
 import image from '../../assets/img/logo/logoInvestigacao.png';
 import { motion } from 'framer-motion';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Investigacao() {
-  const [choice, setChoice] = useState('option1');
-  const [reason, setReason] = useState('');
-  const [how, setHow] = useState('');
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [assassino, setAssassino] = useState('option1')
+  const [motivo, setMotivo] = useState('')
+  const [modo, setModo] = useState('')
+  const [id, setId] = useState('')
+  const [palpiteSucesso, setPalpiteSucesso] = useState(false)
+  const [ganhou, setGanhou] = useState()
+  const [botao, setBotao] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
-    if (choice === 'option1' || reason === '' || how === '') {
+    if (assassino === 'option1' || motivo === '' || modo === '') {
       setIsButtonDisabled(true);
     } else {
       setIsButtonDisabled(false);
     }
-  }, [choice, reason, how]);
+  }, [assassino, motivo, modo]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Opção escolhida: ${choice}\nMotivo: ${reason}\nComo: ${how}`);
+  const botaoClicado = () => {
+    setBotao(true)
+  }
+
+  const handlePalpite = async (event) => {
+    event.preventDefault();
+
+    const resultado = "Vladislav Darkthorn"
+    if(botaoClicado){
+      if(assassino == resultado){
+        navigate('/vitoria')
+        return;
+      }else{
+        setGanhou(false)
+        navigate('/derrota')
+      }
+    }
+
+    const novoPalpite = {
+      assassino: assassino,
+      motivo: motivo,
+      modo: modo,
+      id: id
+    };
+
+    try {
+      const response = await axios.post('https://6661b2b363e6a0189feb2481.mockapi.io/cadastros/api/palpites', novoPalpite);
+      console.log("Palpite feito com sucesso", response.data);
+      setPalpiteSucesso(true);
+    } catch (error) {
+      console.error('Erro ao cadastrar palpite:', error)
+    }
   };
 
   return (
     <motion.div
-        initial={{ opacity: 0 }} 
-        animate={{ opacity: 1, x: 0 }} 
-        exit={{ opacity: 0, x: 100 }}
-        transition={{ ease: "easeOut", duration: 2 }} 
-        >
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1, x: 0 }} 
+      exit={{ opacity: 0, x: 100 }}
+      transition={{ ease: "easeOut", duration: 2 }} 
+    >
       <div className={styles.container}>
         <div className={styles.papel}>
-          <form onSubmit={handleSubmit} className={styles.form}>
+          <form className={styles.form} onSubmit={handlePalpite}>
             <div className={styles.imageContainer}>
               <img src={image} alt="logo" className={styles.logo} />
             </div>
@@ -39,30 +75,30 @@ function Investigacao() {
             <select 
               id="choices" 
               name="choices" 
-              value={choice} 
-              onChange={(e) => setChoice(e.target.value)}
-              className={`${styles.select} ${choice === 'option1' ? styles.selectDefault : styles.selectNormal}`}
+              value={assassino} 
+              onChange={(e) => setAssassino(e.target.value)}
+              className={`${styles.select} ${assassino === 'option1' ? styles.selectDefault : styles.selectNormal}`}
             >
               <option value="option1" className={styles.default}></option>
-              <option value="option2">Morgana Shadowveil</option>
-              <option value="option3">Vladislav Darkthorn</option>
-              <option value="option4">XR-47</option>
-              <option value="option5">Bart Blackbeard</option>
-              <option value="option6">Emberflame</option>
+              <option value="Morgana Shadowveil">Morgana Shadowveil</option>
+              <option value="Vladislav Darkthorn">Vladislav Darkthorn</option>
+              <option value="XR-47">XR-47</option>
+              <option value="Bart Blackbeard">Bart Blackbeard</option>
+              <option value="Emberflame">Emberflame</option>
             </select>
             <label htmlFor="porque" className={styles.label}>POR QUAL MOTIVO?</label>
             <input 
               type="text" 
-              value={reason} 
-              onChange={(e) => setReason(e.target.value)}
+              value={motivo} 
+              onChange={(e) => setMotivo(e.target.value)}
               placeholder="Por inveja?"
               className={styles.input}
             />
             <label htmlFor="como" className={styles.label}>COMO?</label>
             <input 
               type="text" 
-              value={how} 
-              onChange={(e) => setHow(e.target.value)}
+              value={modo} 
+              onChange={(e) => setModo(e.target.value)}
               placeholder="Com uma faca?"
               className={styles.input}
             />
@@ -71,7 +107,7 @@ function Investigacao() {
                 type="submit" 
                 disabled={isButtonDisabled}
                 className={`${isButtonDisabled ? styles.buttonDisabled : styles.buttonEnabled}`}
-              >
+                onClick={botaoClicado}>
                 ENVIAR
               </button>
             </div>
@@ -80,7 +116,6 @@ function Investigacao() {
       </div>
     </motion.div>
   );
-  
 }
 
 export default Investigacao;

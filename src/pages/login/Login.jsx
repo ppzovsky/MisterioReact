@@ -64,7 +64,7 @@ const Login = () => {
         initial={{ opacity: 0 }} 
         animate={{ opacity: 1, x: 0 }} 
         exit={{ opacity: 0, x: 100 }}
-        transition={{ ease: "easeOut", duration: 2 }} 
+        transition={{ ease: "easeOut", duration: 1 }} 
         >
             <div className={styles.corpo}>
                 <div className={styles.container}>

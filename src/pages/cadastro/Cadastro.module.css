@@ -91,6 +91,7 @@
     color: #ffc881;
     font-family: "Germania One", system-ui;
     margin: 10px;
+    padding: 10px;
 }
 
 .password{
@@ -146,4 +147,14 @@
       25%, 75% {
         transform: translateY(5px); 
       }
+}
+
+.registrarDesabilitado {
+    background-color: #7b4805;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.registrarDesabilitado:hover{
+    cursor: not-allowed;
 }

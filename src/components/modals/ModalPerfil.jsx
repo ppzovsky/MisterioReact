@@ -42,7 +42,7 @@ const ModalPerfil = ({ isOpen, onClose }) => {
               <h2 className={styles.titulo}>{perfil.email}</h2>
               <button onClick={() => {
                       onClose();
-                  }} className={styles.botao}>Sair</button>
+                  }} className={styles.botao}>Voltar</button>
           </div>
       </div>
     </motion.div>
