@@ -17,11 +17,11 @@
     {
       "id"  : "pirata",
       "nome": "Bart Blackbeard",
-      "lore": "Bart é o típico pirata beberrão e engraçado, sempre com um copo de rum na mão e uma risada contagiante. Ele é viciado em um jogo de dados chamado \"Crimson Dice\" e passa a maior parte do tempo em tabernas jogando e contando histórias exageradas de suas aventuras. Embora pareça despreocupado, Bart é extremamente leal aos seus amigos e tripulação."
+      "lore": "Bart é o típico pirata ladrão e traiçoeiro, sempre com um copo de rum na mão e um olhar astuto. Ele é obcecado por um jogo de dados chamado Crimson Dice e passa a maior parte do tempo em tabernas, trapaceando e contando mentiras sobre suas supostas aventuras. Embora pareça despreocupado, Bart é conhecido por trair seus amigos e tripulação quando isso serve aos seus interesses."
     },
     {
       "id"  : "demonio",
       "nome": "Emberflame",
-      "lore": "Ember é um jovem demônio sem gênero, extremamente lindo e a imagem da perfeição. Com cabelo de fogo e um espírito travesso. Sua voz é extremamente alta e imponente, parecendo misturar várias vozes. Vive em um pequeno vilarejo demoníaco e leva uma vida comum, fazendo travessuras e brincando com seus amigos. Quando irritado, Ember tende a tacar fogo nas coisas."
+      "lore": "Ember é um demônio maligno sem gênero, de uma beleza infernal e assustadora. Com cabelos de fogo e uma presença ameaçadora, sua voz ecoa de forma sinistra, como uma cacofonia de almas perdidas. Habita um vilarejo demoníaco, onde exerce seu poder sombrio e espalha o terror. Ember se deleita em causar sofrimento e destruição, e quando está irritado, incinera tudo ao seu redor com uma fúria ardente."
     }
   ]

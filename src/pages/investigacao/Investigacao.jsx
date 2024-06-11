@@ -42,7 +42,7 @@ function Investigacao() {
   const handlePalpite = async (event) => {
     event.preventDefault();
 
-    const resultado = "Vladislav Darkthorn"
+    const resultado = "Emberflame"
     if(botaoClicado){
       if(assassino == resultado){
         navigate('/vitoria')
@@ -71,10 +71,10 @@ function Investigacao() {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1, x: 0 }} 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 100 }}
-      transition={{ ease: "easeOut", duration: 2 }} 
+      transition={{ ease: "easeOut", duration: 2 }}
     >
       <div className={styles.container}>
         <div className={styles.papel}>
@@ -83,10 +83,10 @@ function Investigacao() {
               <img src={image} alt="logo" className={styles.logo} />
             </div>
             <label htmlFor="choices" className={styles.label}>QUEM É O ASSASSINO?</label>
-            <select 
-              id="choices" 
-              name="choices" 
-              value={assassino} 
+            <select
+              id="choices"
+              name="choices"
+              value={assassino}
               onChange={(e) => setAssassino(e.target.value)}
               className={`${styles.select} ${assassino === 'option1' ? styles.selectDefault : styles.selectNormal}`}
             >
@@ -98,24 +98,24 @@ function Investigacao() {
               <option value="Emberflame">Emberflame</option>
             </select>
             <label htmlFor="porque" className={styles.label}>POR QUAL MOTIVO?</label>
-            <input 
-              type="text" 
-              value={motivo} 
+            <input
+              type="text"
+              value={motivo}
               onChange={(e) => setMotivo(e.target.value)}
               placeholder="Por inveja?"
               className={styles.input}
             />
             <label htmlFor="como" className={styles.label}>COMO?</label>
-            <input 
-              type="text" 
-              value={modo} 
+            <input
+              type="text"
+              value={modo}
               onChange={(e) => setModo(e.target.value)}
               placeholder="Com uma faca?"
               className={styles.input}
             />
             <div className={styles.botao}>
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 disabled={isButtonDisabled}
                 className={`${isButtonDisabled ? styles.buttonDisabled : styles.buttonEnabled}`}
                 onClick={botaoClicado}>
