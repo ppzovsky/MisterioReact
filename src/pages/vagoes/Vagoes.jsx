@@ -62,7 +62,7 @@ const Vagoes = () => {
             >
               <h1>{slide.title}</h1>
               <img
-                src={slide.imgSrc}
+                src={`/assets/img/vagoes/${slide.imageSrc}`}
                 alt={slide.title}
                 onClick={() => openModal(slide.imgSrc)}
                 className={styles.carouselImage}
