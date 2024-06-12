@@ -2,31 +2,31 @@
     {
         "nome": "César G.",
         "classe": "Assassino",
-        "imagem": "./src/assets/img/quemsomos/cesar.png",
+        "imagem": "/assets/img/quemsomos/cesar.png",
         "linkedin": "https://www.linkedin.com/in/cesarguerrapeixe/"
     },
     {
         "nome": "Emanuel F.",
         "classe": "Elfo",
-        "imagem": "./src/assets/img/quemsomos/emanuel.png",
+        "imagem": "/assets/img/quemsomos/emanuel.png",
         "linkedin": "https://www.linkedin.com/in/emanuel-f-2565181b6/"
     },
     {
         "nome": "João Pedro",
         "classe": "Dragão",
-        "imagem": "./src/assets/img/quemsomos/joao.png",
+        "imagem": "/assets/img/quemsomos/joao.png",
         "linkedin": "https://www.linkedin.com/in/jo%C3%A3o-pedro-soares-164964236/"
     },
     {
         "nome": "Maria Eduarda",
         "classe": "Bruxa",
-        "imagem": "./src/assets/img/quemsomos/madu.png",
+        "imagem": "/assets/img/quemsomos/madu.png",
         "linkedin": "https://www.linkedin.com/in/maria-eduarda-goes-pelaggi/"
     },
     {
         "nome": "Thiago M.",
         "classe": "Mutante",
-        "imagem": "./src/assets/img/quemsomos/thiago.png",
+        "imagem": "/assets/img/quemsomos/thiago.png",
         "linkedin": "https://www.linkedin.com/in/thiago-moura93/"
     }
 ]
