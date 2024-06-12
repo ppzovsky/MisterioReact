@@ -34,7 +34,7 @@ const Sobre = () => {
                             <li key={pessoas.nome} className={styles.lista}>
                                 <a href={pessoas.linkedin} target='blank'>
                                 <div className={styles.btnsobre}>
-                                <div className={styles.imagem}><img src={pessoas.imagem} className={styles.foto} alt="Descrição da Imagem" /></div>
+                                <div className={styles.imagem}><img src={`${pessoas.imagem}`} className={styles.foto} alt="Descrição da Imagem" /></div>
                                 <div className={styles.nome}>{pessoas.nome}</div>
                                 <div className={styles.classe}>{pessoas.classe}</div>
                                 </div>
