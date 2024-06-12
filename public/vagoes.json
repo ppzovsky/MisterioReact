@@ -1,27 +1,27 @@
 [
     {
         "title": "Primeiro Vagão",
-        "imgSrc": "/assets/img/vagoes/Vagao1.png",
+        "imgSrc": "/assets/img/vagoes/vagao1.png",
         "description": "Esta é a cena do crime, o vagão de Morgana Shadowveil, uma bruxa que foi assassinada com um tiro nas costas. Não houve roubo de muitas riquezas, porém gavetas foram reviradas e algumas poções estão faltando. Existe uma arma no chão, próximo a entrada do vagão, que provavelmente foi a arma do crime, uma pistola a lazer com estilo cyberpunk."
     },
     {
         "title": "Segundo Vagão",
-        "imgSrc": "/assets/img/vagoes/Vagao2.png",
+        "imgSrc": "/assets/img/vagoes/vagao2.png",
         "description":"Ao lado da cena do crime. O vagão de Vladislav Darkthorn, um vampiro que alega estar dormindo na hora do crime. Ele que dorme em um caixão a prova de som, não sabe qual foi a causa de sua cortina queimada, além disso, teve 12 garrafas de vinho e uma taça roubadas na noite do crime, aparentemente também tentaram arrombar o seu baú mas não tiveram sucesso. "
     },
     {
         "title": "Terceiro Vagão",
-        "imgSrc": "/assets/img/vagoes/Vagao3.png",
+        "imgSrc": "/assets/img/vagoes/vagao3.png",
         "description":"A 2 vagões de distância da cena do crime, temos o vagão de XR-47, uma robô comerciante interestelar que teve uma pistola a lazer roubada. Alega ter passado o dia apostando em um jogo de dados e bebendo com outro passageiro, e ter perdido 3 itens nas apostas: dinheiro, um tablet e um terceiro que se recusa a revelar. Complementa que a garrada de vinho encontrada no seu vagão foi um presente do companheiro de apostas. Ao término da jogatina, a robô foi dormir."
     },
     {
         "title": "Quarto Vagão",
-        "imgSrc": "/assets/img/vagoes/Vagao4.png",
+        "imgSrc": "/assets/img/vagoes/vagao4.png",
         "description":"A 1 vagão de distância da cena do crime, temos o vagão de Bart Blackbeard, um pirata que encontrou e reportou o corpo. Alega ter passado o dia apostando em um jogo de dados e bebendo com outro passageiro, e ter ganhado 3 itens nas apostas: dinheiro, um tablet e um terceiro que se recusa a revelar. Ao anoitecer Bart visitou outros vagões, roubando itens dos outros passageiros, e vindo a encontrar a vítima no último vagão do trem."
     },
     {
         "title": "Quinto Vagão",
-        "imgSrc": "/assets/img/vagoes/Vagao5.png",
+        "imgSrc": "/assets/img/vagoes/vagao5.png",
         "description":"No quinto vagão temos Emberflame, um demônio que quando se irrita taca fogo nas coisas. Na noite do crime alega que queria ler o livro que está em cima de sua cama, foi ao vagão ao lado e não encontrou ninguém, isso o deixou irritado e deixou de ler o livro, voltou para o seu aposento e não saiu mais."
     }
 ]

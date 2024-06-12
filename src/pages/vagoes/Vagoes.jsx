@@ -81,7 +81,7 @@ const Vagoes = () => {
               src={modalImage}
               alt="Ampliada"
               onClick={(e) => {
-                e.stopPropagation(); // Prevent closing the modal when clicking the image
+                e.stopPropagation(); 
                 toggleZoom();
               }}
             />
