@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from '../login/Login.module.css';
 import logo from '../../assets/logo.png';
+import image from '../../assets/img/detetives/detetive3.png'
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
@@ -14,6 +15,13 @@ const Login = () => {
     const [loginSucess, setLoginSucess] = useState(true);
 
     const navigate = useNavigate();
+
+    const userLogado ={
+        username : 'MisterioReact',
+        password : 'senha1',
+        imageSrc : image,
+        email : 'misterio@react.com',
+    }
     
     useEffect(() => {
         axios.get('https://6661b2b363e6a0189feb2481.mockapi.io/cadastros/api/usuarios')
@@ -23,33 +31,35 @@ const Login = () => {
             .catch(error => {
                 console.error('Erro ao buscar dados:', error);
             });
+            console.log(listaUsers);
     }, []);
   
     const fazerLogin = (event) => {
         event.preventDefault();
-  
-        const userExiste = listaUsers.find(
-            (user) => user.username === username && user.password === password
-        );
-        if (userExiste){
-            const usuario = {
-                username : userExiste.username,
-                password : userExiste.password,
-                imageSrc : userExiste.imageSrc,
-                email : userExiste.email,
+        
+        if (username === userLogado.username && password === userLogado.password){
+            const userExiste = userLogado;
+            if (userExiste){
+                const usuario = {
+                    username : userExiste.username,
+                    password : userExiste.password,
+                    imageSrc : userExiste.imageSrc,
+                    email : userExiste.email,
+                }
+                setDadosUsuario(true);
+                setPassword('');
+                setUsername ('');
+                setLoginSucess(true);
+                localStorage.setItem('login', JSON.stringify(usuario));
+                navigate('/crime');
+                console.log(dadosUsuario); 
             }
-            setDadosUsuario(true);
-            setPassword('');
-            setUsername ('');
-            setLoginSucess(true);
-            localStorage.setItem('login', JSON.stringify(usuario));
-            navigate('/crime');
-            console.log(dadosUsuario); 
+            else{
+                setDadosUsuario(false);
+                setLoginSucess(false);
+            }
         }
-        else{
-            setDadosUsuario(false);
-            setLoginSucess(false);
-        }
+
     };
   
     useEffect(()=>{
