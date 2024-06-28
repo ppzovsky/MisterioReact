@@ -4,6 +4,7 @@ import logo from '/assets/logo.png';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import image from '/assets/img/detetives/detetive4.png'
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -15,6 +16,13 @@ const Login = () => {
 
     const navigate = useNavigate();
     
+    const userLogado ={
+        username : 'MisterioReact',
+        password : 'senha1',
+        imageSrc : image,
+        email : 'misterio@react.com',
+    }
+    
     useEffect(() => {
         axios.get('https://6661b2b363e6a0189feb2481.mockapi.io/cadastros/api/usuarios')
             .then(response => {
@@ -23,14 +31,14 @@ const Login = () => {
             .catch(error => {
                 console.error('Erro ao buscar dados:', error);
             });
+            console.log(listaUsers);
     }, []);
   
     const fazerLogin = (event) => {
         event.preventDefault();
-  
-        const userExiste = listaUsers.find(
-            (user) => user.username === username && user.password === password
-        );
+        
+        if (username === userLogado.username && password === userLogado.password){
+            const userExiste = userLogado;
         if (userExiste){
             const usuario = {
                 username : userExiste.username,
@@ -50,6 +58,7 @@ const Login = () => {
             setDadosUsuario(false);
             setLoginSucess(false);
         }
+    }
     };
   
     useEffect(()=>{
