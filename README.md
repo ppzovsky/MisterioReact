@@ -45,6 +45,10 @@ Mistério React é uma página web interativa que apresenta os elementos de um c
 4. **Acesse a Página:**
    Abra seu navegador e acesse `http://localhost:3000` para visualizar o projeto.
 
+5. **Login no Projeto:**
+   Para fazer login no projeto use as credenciais:  
+      **username : 'MisterioReact'
+      password : 'senha1'**
 
 ---
 
